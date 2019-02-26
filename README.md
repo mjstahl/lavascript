@@ -1,15 +1,8 @@
-# Lavascript
-Lavascript is Literate JavaScript
+# LavaScript
+LavaScript is Literate JavaScript.
 
-## CLI
+## CLI Use
 
 ```console
 $ npm install -g lavascript
-```
-
-
-## API
-
-```js
-const lavascript = require('lavascript')
 ```

@@ -1,0 +1,32 @@
+{
+  "name": "lavascript",
+  "version": "0.1.0",
+  "description": "Literate JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjstahl/lavascript.git"
+  },
+  "keywords": [
+    "literate",
+    "javascript",
+    "markdown",
+    "md"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjstahl/lavascript/issues"
+  },
+  "homepage": "https://github.com/mjstahl/lavascript#readme",
+  "dependencies": {
+    "marked": "^0.6.1",
+    "nopt": "^4.0.1"
+  },
+  "devDependencies": {
+    "ava": "^1.2.1"
+  }
+}
