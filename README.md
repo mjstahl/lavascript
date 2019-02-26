@@ -1,5 +1,5 @@
 # Lavascript
-Literate programming in JavaScript
+Lavascript is Literate JavaScript
 
 ## CLI
 
