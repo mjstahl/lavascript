@@ -1,13 +1,15 @@
 # Lavascript
-Literate programming with Markdown and Javascript
+Literate programming in JavaScript
 
-## Installation
+## CLI
 
 ```console
 $ npm install -g lavascript
 ```
 
-## CLI Usage
-
 
 ## API
+
+```js
+const lavascript = require('lavascript')
+```
