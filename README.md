@@ -1,11 +1,9 @@
 # LavaScript is Literate JavaScript.
 
-
-
 ## Installation
 
 ```shell
-# install locally for a project
+# install locally for your project
 $ npm install --save-dev lavascript
 ```
 
@@ -13,16 +11,6 @@ $ npm install --save-dev lavascript
 # install globally to execute on .js.md files anywhere
 $ npm install -g lavascript
 ```
-
-## Getting Started
-
-To compile a script:
-
-`lavascript path/to/script.js.md`
-
-To execute a script:
-
-`lavascript -e path/to/script.js.md`
 
 ## Usage
 
