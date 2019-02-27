@@ -27,7 +27,7 @@ To execute a script:
 ## Usage
 
 ```shell
-$ lavascript <input file, dir> <output dir>
+$ lavascript [input file, dir] [output dir]
 ```
 
 Once installed, you should have access to the `lavascript` command, which can execute scripts and compile `.js.md` files into JavaScript files of the same name.
