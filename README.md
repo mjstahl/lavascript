@@ -1,5 +1,6 @@
-# LavaScript
-LavaScript is Literate JavaScript.
+# LavaScript is Literate JavaScript.
+
+
 
 ## Installation
 
@@ -26,20 +27,15 @@ To execute a script:
 ## Usage
 
 ```shell
-$ lavascript [options] [file | directory]
+$ lavascript <input file, dir> <output dir>
 ```
 
 Once installed, you should have access to the `lavascript` command, which can execute scripts and compile `.js.md` files into JavaScript files of the same name.
-
-The `lavascript` command has the following options:
-
-| **Option**                             | **Description**                              |
-|----------------------------------------|----------------------------------------------|
-| `-e, --exec <FILE>`                    | Compile and execute .js.md script and print the result to stdio.
-| `-o, --output <DIR>`                   | Write all compiled JavaScript files to a specific directory.
 
 ## Examples
 
 * Compile all `.js.md` files in `src` directory and write the JavaScript files to the `dist` directory.
 
-`lavascript -o dist src`
+```shell
+$ lavascript src dist
+```
