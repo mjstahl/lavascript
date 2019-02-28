@@ -2,8 +2,8 @@
   "name": "lavascript",
   "version": "0.3.4",
   "description": "Literate JavaScript",
-  "main": "compile.js",
-  "bin": "bin.js",
+  "main": "dist/compile.js",
+  "bin": "dist/bin.js",
   "scripts": {
     "lint": "standard --fix",
     "test": "npm run lint && ava"
