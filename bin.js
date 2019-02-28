@@ -34,7 +34,7 @@ function extractFromTo (input, output) {
 
 function exitIf (err) {
   if (!err) return
-  console.log(err.message)
+  console.error(err.message)
   process.exit(1)
 }
 
