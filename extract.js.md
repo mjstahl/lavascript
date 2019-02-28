@@ -12,7 +12,7 @@ We don't need much. At this point in time we just need a single function that ta
 
 We want the indented code blocks because that is how Literate CoffeeScript does it. They are easier to type, and good editors keep indentation. I believe there is also an added benefit that we can use syntax highlighting for other languages, with fenced code blocks, since this project is specifically for JavaScript.
 
-'marked' makes it really easy by differentiating the indented blocks and the language specific blocks -- the latter has a `lang` property, the former does not.
+`marked` makes it really easy by differentiating the indented blocks and the fenced-in blocks -- the latter has a `lang` property, the former does not.
 
         return t.type === 'code' && !t.hasOwnProperty('lang')
       })
