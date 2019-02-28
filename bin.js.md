@@ -1,12 +1,10 @@
-    #!/usr/bin/env node
-
     const fs = require('fs')
     const glob = require('glob')
     const mkdirp = require('mkdirp')
     const path = require('path')
     const process = require('process')
 
-    const compile = require('./compile')
+    const extract = require('./extract')
 
 The goal at this point in the project is to be self evaluating. By that I mean, use the project to write the project. With that, there is only one feature we have to support, _read `js.md` files from one directory and ouput the resulting `.js` files to another directory_.
 
@@ -24,11 +22,16 @@ For each file found we need to:
 
 Read the file.
 
-        files.map(f => {
+        files.forEach(f => {
+          const parts = path.parse(f)
+
+If the input and output directories are not the same, we do not want to read any files from the output directory.
+
+          if (input !== output && parts.dir.includes(output)) return
+
           const encoding = { encoding: 'utf8' }
-          fs.readFile(path.join(__dirname, f), encoding, (err, data) => {
+          fs.readFile(path.join(input, f), encoding, (err, data) => {
             exitIf(err)
-            const parts = path.parse(f)
 
 Get the subdirectory of the file, because we want to recreate the same tree in the destination directory.
 
@@ -46,11 +49,11 @@ Use `mkdirp` to create the new file, otherwise we would have to create each new 
 
 Extract the JS code from the markdown file.
 
-              const compiled = compile(data)
+              const extracted = extract(data)
 
 Write the new JS file to its final destination
 
-              fs.writeFile(writeTo, compiled, encoding, err => exitIf(err))
+              fs.writeFile(writeTo, extracted, encoding, err => exitIf(err))
             })
           })
         })
