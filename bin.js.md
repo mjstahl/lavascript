@@ -1,3 +1,4 @@
+    const chalk = require('chalk')
     const fs = require('fs')
     const glob = require('glob')
     const mkdirp = require('mkdirp')
@@ -5,13 +6,14 @@
     const process = require('process')
 
     const extract = require('./extract')
+    const pkg = require('../package')
 
 The goal at this point in the project is to be self evaluating. By that I mean, use the project to write the project. With that, there is only one feature we have to support, _read `js.md` files from one directory and ouput the resulting `.js` files to another directory_.
 
     function extractFromTo (input, output) {
       fs.stat(input, (err, src) => {
         exitIf(err)
-        const dest = path.resolve(__dirname, output)
+        const dest = path.resolve(output)
 
 Glob is by far the simplist way to get a filtered recursive list of files from a particular location.
 
@@ -40,7 +42,7 @@ Get the subdirectory of the file, because we want to recreate the same tree in t
 Join the relative path our current executing directory and the dest directory, with the name of the file sans the extension. This is why they are `.js.md` files, no extra processing to strip off the extension (not really, but it worked out nicely that way).
 
             const writeTo =
-              path.join(path.relative(__dirname, dest), dir, parts.name)
+              path.join(path.relative(input, dest), dir, parts.name)
 
 Use `mkdirp` to create the new file, otherwise we would have to create each new subdirectory by hand. No thank you, I will let someone else do that for me.
 
@@ -53,7 +55,10 @@ Extract the JS code from the markdown file.
 
 Write the new JS file to its final destination
 
-              fs.writeFile(writeTo, extracted, encoding, err => exitIf(err))
+              fs.writeFile(writeTo, extracted, encoding, err => {
+                exitIf(err)
+                console.log(`${f} -> ${chalk.green(writeTo)}`)
+              })
             })
           })
         })
