@@ -1,5 +1,7 @@
 # bin.js.md
 
+The goal at this point in the project is to be self evaluating. By that I mean, use the project to write the project.
+
     const chalk = require('chalk')
     const fs = require('fs')
     const glob = require('glob')
@@ -9,7 +11,7 @@
 
     const extract = require('./extract')
 
-The goal at this point in the project is to be self evaluating. By that I mean, use the project to write the project. With that, there is only one feature we have to support, _read `js.md` files from one directory and ouput the resulting `.js` files to another directory_.
+Because we are only looking to be self-hosting at this point, there is only one feature we have to support: read `js.md` files from one directory and ouput the resulting `.js` files to another directory.
 
     function extractFromTo (input, output) {
       fs.stat(input, (err, src) => {
@@ -85,7 +87,3 @@ Nothing surprising here. We expect two arguments, so we need an `argv` length of
 
     const [,, from, to] = process.argv
     extractFromTo(from, to)
-
-## Changelog
-
-* 2019-03-08 - Remove the uneeded import of `package.json`
