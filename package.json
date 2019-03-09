@@ -5,9 +5,8 @@
   "main": "dist/compile.js",
   "bin": "dist/bin.js",
   "scripts": {
-    "gen": "node dist/bin.js ./ dist",
-    "lint": "standard --fix",
-    "test": "npm run lint && ava"
+    "generate": "node dist/bin.js ./ dist && npm run lint",
+    "lint": "standard 'dist/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -33,7 +32,6 @@
     "nopt": "^4.0.1"
   },
   "devDependencies": {
-    "ava": "^1.2.1",
     "standard": "^12.0.1"
   }
 }
