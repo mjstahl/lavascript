@@ -1,7 +1,11 @@
+# extract.js.md
+
 We want to emulate how [Literate CoffeeScript](https://coffeescript.org/#literate) works as close as possible. Thankfully with the right markdown library it is fairly simple to get an initial version up and running.
 
     const marked = require('marked')
     const os = require('os')
+
+Since we are at the top level of the source tree, we will assume that of the destination folder as well. But that means that the project's `package.json` will be in a parent directory as opposed to a peer file.
 
     const pkg = require('../package.json')
 
@@ -25,3 +29,8 @@ After we find all the code blocks we need to join them with line breaks. Althoug
     }
 
     module.exports = compile
+
+
+## Changelog
+
+* 2019-03-08 - Added comment describe why the coded imported `package.json` from the parent directory
