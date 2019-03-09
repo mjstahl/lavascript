@@ -9,10 +9,6 @@
 
     const extract = require('./extract')
 
-Since we are at the top level of the source tree, we will assume that of the destination folder as well. But that means that the project's `package.json` will be in a parent directory as opposed to a peer file.
-
-    const pkg = require('../package')
-
 The goal at this point in the project is to be self evaluating. By that I mean, use the project to write the project. With that, there is only one feature we have to support, _read `js.md` files from one directory and ouput the resulting `.js` files to another directory_.
 
     function extractFromTo (input, output) {
@@ -92,4 +88,4 @@ Nothing surprising here. We expect two arguments, so we need an `argv` length of
 
 ## Changelog
 
-* 2019-03-08 - Added comment describe why the coded imported `package.json` from the parent directory
+* 2019-03-08 - Remove the uneeded import of `package.json`
