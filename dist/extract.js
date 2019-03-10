@@ -4,8 +4,8 @@
 const marked = require('marked')
 const os = require('os')
 const pkg = require('../package.json')
-function compile (markdown) {
-  const tokens = marked.lexer(markdown).filter(t => {
+function compile (contents) {
+  const tokens = marked.lexer(contents).filter(t => {
     return t.type === 'code' && !t.hasOwnProperty('lang')
   })
   const newline = (os.platform() === 'win32') ? '\r\n' : '\n'

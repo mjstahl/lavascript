@@ -2,7 +2,7 @@
   "name": "lavascript",
   "version": "0.5.6",
   "description": "Literate JavaScript",
-  "main": "dist/compile.js",
+  "main": "dist/extract.js",
   "bin": "dist/bin.js",
   "scripts": {
     "generate": "node dist/bin.js ./ dist && npm run lint",

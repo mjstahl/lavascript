@@ -11,7 +11,7 @@ Since we are at the top level of the source tree, we will assume that of the des
 
 We don't need much. At this point in time we just need a single function that takes Markdown content and extracts the specific code blocks.
 
-    function compile (markdown) {
+    function extract (markdown) {
       const tokens = marked.lexer(markdown).filter(t => {
 
 We want the indented code blocks because that is how Literate CoffeeScript does it. They are easier to type, and good editors keep indentation. I believe there is also an added benefit that we can use syntax highlighting for other languages, with fenced code blocks, since this project is specifically for JavaScript.
@@ -28,4 +28,4 @@ After we find all the code blocks we need to join them with line breaks. Althoug
       return `${header}\n\n${tokens.map(t => t.text).join(newline)}\n`
     }
 
-    module.exports = compile
+    module.exports = extract
