@@ -2,6 +2,8 @@
 
 The goal at this point in the project is to be self evaluating. By that I mean, use the project to write the project.
 
+    #!/usr/bin/env node
+
     const chalk = require('chalk')
     const fs = require('fs')
     const glob = require('glob')
