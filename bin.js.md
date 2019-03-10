@@ -27,7 +27,7 @@ For each file found we need to:
 
 Read the file.
 
-        files.forEach(f => {
+        files.filter(f => !f.includes('node_modules')).forEach(f => {
           const parts = path.parse(f)
 
 If the input and output directories are not the same, we do not want to read any files from the output directory.
