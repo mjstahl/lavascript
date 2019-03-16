@@ -49,3 +49,9 @@ $ lavascript [input file or dir] [output dir]
 ```
 
 Once installed, you should have access to the `lavascript` command, which can execute scripts and compile `.js.md` files into JavaScript files of the same name.
+
+## Ecosystem
+
+* [Webpack Loader](https://npm.im/lavascript-loader)
+* [Browserify Transform](https://github.com/mjstahl/lavaify) (Work In Progress)
+* [VS Code Extension](https://github.com/mjstahl/vscode-lavascript) (Work In Progress)
