@@ -1,6 +1,6 @@
 {
   "name": "lavascript",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Literate JavaScript",
   "main": "dist/extract.js",
   "bin": "dist/bin.js",
