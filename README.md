@@ -10,11 +10,19 @@ A pretty good and concise description of Literate Programming is from this [blog
 
 Literate Programming inverts the relationship between comments and code.
 
-### Examples
+## Examples
+
+### Literate Programming
 
 * https://github.com/jashkenas/coffeescript/blob/master/src/sourcemap.litcoffee
 * https://gitlab.com/randomenduser/dotfiles/blob/master/.emacs.d/emacs.org
 * https://gist.github.com/jashkenas/3fc3c1a8b1009c00d9df
+
+### Literate JavaScript
+
+* https://github.com/mjstahl/lavascript-loader/blob/master/loader.js.md
+* https://github.com/mjstahl/lavascript/blob/master/bin.js.md
+* https://github.com/mjstahl/lavascript/blob/master/extract.js.md
 
 ## Advantages
 
