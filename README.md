@@ -62,5 +62,5 @@ Once installed, you should have access to the `lavascript` command, which can ex
 
 * [Webpack Loader](https://npm.im/lavascript-loader)
 * [StealJS Plugin](https://npm.im/steal-lavascript)
-* [Browserify Transform](https://github.com/mjstahl/lavaify) (Work In Progress)
+* [Browserify Transform](https://npm.im/lavaify)
 * [VS Code Extension](https://github.com/mjstahl/vscode-lavascript) (Work In Progress)
