@@ -61,5 +61,6 @@ Once installed, you should have access to the `lavascript` command, which can ex
 ## Ecosystem
 
 * [Webpack Loader](https://npm.im/lavascript-loader)
+* [StealJS Plugin](https://npm.im/steal-lavascript)
 * [Browserify Transform](https://github.com/mjstahl/lavaify) (Work In Progress)
 * [VS Code Extension](https://github.com/mjstahl/vscode-lavascript) (Work In Progress)
